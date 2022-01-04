@@ -2,11 +2,11 @@ import { useState } from "react"
 import icon from "../images/icon-arrow-down.svg"
 import woman from "../images/illustration-woman-online-mobile.svg"
 import bgMobile from "../images/bg-pattern-mobile.svg"
+import womanDesktop from "../images/illustration-woman-online-desktop.svg"
 
 export default function Main() {
 
     const [selected, setSelected] = useState('')
-    console.log(selected)
 
     function handleSelected(item) {
 
@@ -45,8 +45,11 @@ export default function Main() {
 
     return (
         <div className="faq-container">
+
             <img className="woman-image" src={woman} alt="Woman on computer" />
             <img className="shadow-image" src={bgMobile} alt="Shadow" />
+
+
             <h1>FAQ</h1>
             <div className="main-content">
                 {faqContent.map((item) => (
