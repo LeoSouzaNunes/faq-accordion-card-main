@@ -1,9 +1,23 @@
 import { useState } from "react"
 import icon from "../images/icon-arrow-down.svg"
+import woman from "../images/illustration-woman-online-mobile.svg"
+import bgMobile from "../images/bg-pattern-mobile.svg"
 
 export default function Main() {
 
-    const [selected, setSelected] = useState(false)
+    const [selected, setSelected] = useState('')
+    console.log(selected)
+
+    function handleSelected(item) {
+
+        if (selected === item.question && selected !== '') {
+            setSelected('')
+        } else if (selected === '') {
+            setSelected(item.question)
+        } else {
+            setSelected(item.question)
+        }
+    }
 
     const faqContent = [{
         question: "How many team members can I invite?",
@@ -31,13 +45,25 @@ export default function Main() {
 
     return (
         <div className="faq-container">
+            <img className="woman-image" src={woman} alt="Woman on computer" />
+            <img className="shadow-image" src={bgMobile} alt="Shadow" />
             <h1>FAQ</h1>
-            <div>
+            <div className="main-content">
                 {faqContent.map((item) => (
 
-                    <div key={item.question} onClick={() => setSelected(true)} className={`${selected ? "faq-open" : "faq"}`}>
-                        <h2 className="faq-question">{item.question} <img src={icon} alt="icon arrow down" /></h2>
-                        <span className="faq-answer hidden">{item.answer}</span>
+                    <div
+                        key={item.question}
+                        onClick={() => handleSelected(item)}
+                        className="faq"
+                    >
+
+                        <h2 className={`${selected === item.question && "faq-question-selected"} faq-question`}>
+                            {item.question} <img className={`${selected === item.question && "rotate"}`} src={icon} alt="icon arrow down" />
+                        </h2>
+                        <span className={`${selected !== item.question && "hidden"} faq-answer`}>
+                            {item.answer}
+                        </span>
+
                     </div>
 
                 ))}

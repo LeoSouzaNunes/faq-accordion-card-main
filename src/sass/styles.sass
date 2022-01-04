@@ -11,6 +11,7 @@
     box-sizing: border-box
 
 body
+    padding-top: 80px
     min-height: 100vh
     background-image: linear-gradient(variables.$Soft-violet,variables.$Soft-blue)
     font-family: 'Kumbh Sans', sans-serif
@@ -31,33 +32,54 @@ body
 @media ( max-width: 375px)
     .faq-container
         width: 320px
-        min-height: 525px
+        position: relative
 
         padding: 0px 25px
-        padding-top: 130px
-        padding-bottom: 30px
+        padding-top: 135px
+        padding-bottom: 50px
 
         background-color: #FFFFFF
         border-radius: 20px
         box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3)
-        gap: 20px
+        gap: 15px
         @include mixins.centering
+
+        .woman-image
+            width: 75%
+            position: absolute
+            top: -110px
+
+        .shadow-image
+            width: 75%
+            position: absolute
+            top: 0px
 
         h1
             color: variables.$Very-dark-desaturated-blue
 
+        .main-content
+            width: 100%
+
     .faq
         width: 100%
         padding: 15px 0px
-        border-bottom: solid 1.5px variables.$Light-grayish-blue
+        border-bottom: solid 1px variables.$Light-grayish-blue
+
+        .rotate
+            transform: rotateZ(180deg)
 
         &-question
             display: flex
             justify-content: space-between
             align-items: center
             color: variables.$Very-dark-grayish-blue
-            font-size: 0.8rem
+            font-size: 0.85rem
             font-weight: 400
+
+        &-question-selected
+            font-size: 0.87rem
+            font-weight: 700
+            color: variables.$Very-dark-desaturated-blue
 
         &-answer
             color: variables.$Dark-grayish-blue
