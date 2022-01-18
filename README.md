@@ -27,12 +27,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![mobile version](https://user-images.githubusercontent.com/93560377/149857438-8fda312b-8135-4d55-b84d-5011c51ab645.png)
+![desktop version](https://user-images.githubusercontent.com/93560377/149857440-74b2f8fe-014e-426a-9c21-1b64be322b9e.png)
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repository](https://github.com/LeoSouzaNunes/faq-accordion-card-main)
+- Live Site URL: [Demo](https://faq-accordion-card-main-chi-six.vercel.app/)
 
 ## My process
 
