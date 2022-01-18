@@ -3,6 +3,7 @@ import icon from "../images/icon-arrow-down.svg"
 import woman from "../images/illustration-woman-online-mobile.svg"
 import bgMobile from "../images/bg-pattern-mobile.svg"
 import womanDesktop from "../images/illustration-woman-online-desktop.svg"
+import box from "../images/illustration-box-desktop.svg"
 
 export default function Main() {
 
@@ -49,7 +50,10 @@ export default function Main() {
             <img className="woman-image" src={woman} alt="Woman on computer" />
             <img className="shadow-image" src={bgMobile} alt="Shadow" />
 
-
+            <div className="image-desktop-container">
+                <img className="woman-desktop" src={womanDesktop} alt="Woman on computer" />
+                <img className="box" src={box} alt="Box" />
+            </div>
             <h1>FAQ</h1>
             <div className="main-content">
                 {faqContent.map((item) => (
